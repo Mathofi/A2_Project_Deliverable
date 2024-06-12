@@ -13,6 +13,6 @@ function addProducts() {
             </div>
         </div>`
     );
-};
+}
 addProducts();
 
