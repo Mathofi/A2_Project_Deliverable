@@ -26,7 +26,7 @@ function saveToLocalStorage() {
             cart.push(selectedProduct);
             localStorage.setItem('CART', JSON.stringify(cart));
             displayCart();
-        }, false);
+        });
     }
 }
 saveToLocalStorage();
@@ -47,5 +47,11 @@ function displayCart() {
         </div>
         `
     );
+    removeFromCart();
 }
 displayCart();
+
+let checkoutButton = document.getElementById('checkoutButton');
+checkoutButton.addEventListener('click', function() {
+    window.location.assign('cart.html');
+});
