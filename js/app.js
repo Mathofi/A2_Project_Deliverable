@@ -22,7 +22,7 @@ function removeFromCart() {
                     itemIndex = cart.indexOf(cart[j]);
                 }
             }
-            cart.splice(itemIndex);
+            cart.splice(itemIndex, 1);
             localStorage.setItem('CART', JSON.stringify(cart));
             displayCart();
             if (cart.length == 0) {
